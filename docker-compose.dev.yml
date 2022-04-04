@@ -1,0 +1,11 @@
+version: "2.3"
+
+services:
+  dev:
+    build: ./docker_dev
+    network_mode: host
+    volumes:
+      - "./:/opt/terra_bot"
+    #ports:
+    #  - "127.0.0.1:8888:8888"
+    #  - "127.0.0.1:8889:8080"

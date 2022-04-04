@@ -1,0 +1,2 @@
+class NonSwapException(Exception):
+     pass
