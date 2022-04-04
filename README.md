@@ -14,6 +14,8 @@ Whether you're swapping USD for LUNA or mTSLA or any other CW20 token, this libr
 ## Example
 
 ```py
+import terrabot
+
 async def main():
     # default_configuration gives us a good starting-point for the respective network
     # this configuration has common tokens and swaps pre-intsalled, suitable for most users

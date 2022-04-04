@@ -9,8 +9,11 @@ setup(
     author_email='peter@codebuffet.co',
     license='MIT',
     packages=['terrabot'],
+    package_data={'terrabot': ['default_config/*.yml']},
+    include_package_data=True,
     install_requires=[
         'terra-sdk>=2.0.5',
-        'python-box>=6.0.2'
+        'python-box>=6.0.2',
+        'pyyaml>=6.0.0'
     ]
 )

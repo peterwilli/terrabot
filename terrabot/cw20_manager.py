@@ -1,7 +1,6 @@
 from terra_sdk.core.wasm import MsgExecuteContract
 from terra_sdk.core import Coins, Coin
 
-import httpx
 import json
 import traceback
 import math
