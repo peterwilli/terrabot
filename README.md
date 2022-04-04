@@ -15,6 +15,9 @@ Whether you're swapping USD for LUNA or mTSLA or any other CW20 token, this libr
 
 ```py
 import terrabot
+import os
+import asyncio
+from terra_sdk.key.mnemonic import MnemonicKey
 
 async def main():
     # default_configuration gives us a good starting-point for the respective network
