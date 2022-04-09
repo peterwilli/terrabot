@@ -14,6 +14,7 @@ setup(
     install_requires=[
         'terra-sdk>=2.0.5',
         'python-box>=6.0.2',
-        'pyyaml>=6.0.0'
+        'pyyaml>=6.0.0',
+        'httpx>=0.22.0'
     ]
 )

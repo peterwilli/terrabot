@@ -6,6 +6,7 @@ import traceback
 import math
 import sys
 import base64
+import httpx
 
 from .exceptions import NonSwapException
 
@@ -36,7 +37,7 @@ class CW20Manager:
         direction = swap_contract_result['direction']
         # Create the message
         if direction == 'buy':
-            coin = Coin.parse(f"{math.floor(offer * 1e6)}{symbol_from}").to_data()
+            coin = Coin.parse(f"{math.floor(offer * 1e6)}u{symbol_from}").to_data()
             coins = Coins.from_data([coin])
             return MsgExecuteContract(
                 sender = my_address,
@@ -45,7 +46,7 @@ class CW20Manager:
                     "swap": {
                         "offer_asset": {
                             "max_spread":"0.005",
-                            "info": {"native_token": {"denom": symbol_from}},
+                            "info": {"native_token": {"denom": f"u{symbol_from}"}},
                             "amount": str(math.floor(offer * 1e6)),
                         },
                     }

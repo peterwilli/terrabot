@@ -21,15 +21,16 @@ from terra_sdk.key.mnemonic import MnemonicKey
 
 async def main():
     # default_configuration gives us a good starting-point for the respective network
-    # this configuration has common tokens and swaps pre-intsalled, suitable for most users
+    # this configuration has common tokens and swaps pre-intsalled
     config = terrabot.default_configuration('testnet')
     client = terrabot.Client(MnemonicKey(mnemonic='test wallet change the seed'), config)
     # Get all available tokens in said network
     tokens = await client.available_tokens()
     # Swap 1 luna for usd
-    swap = await client.swap('uluna', 'uusd', 1)
-    # Using 10 USD to buy mTSLA, note how you can use the same function
-    swap = await client.swap('uusd', 'mTSLA', 10)
+    swap = await client.swap('luna', 'usd', 1)
+    # Using 10 USD to buy mTSLA, paying the fees in USD
+    # note how you can use the same function as above
+    swap = await client.swap('usd', 'mTSLA', 10, pay_fees_in = 'usd')
 
 asyncio.get_event_loop().run_until_complete(main())
 ```
