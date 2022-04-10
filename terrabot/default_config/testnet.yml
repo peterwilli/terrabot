@@ -2,11 +2,32 @@ chain:
     id: bombay-12
     url: https://bombay-lcd.terra.dev
 cw20_tokens:
-    # https://github.com/terra-money/assets/blob/master/cw20/contracts.js
+    # https://github.com/Mirror-Protocol/whitelist/blob/master/bombay.json
     mTSLA:
         icon: https://whitelist.mirror.finance/icon/TSLA.png
         contract_hash: terra1nslem9lgwx53rvgqwd8hgq7pepsry6yr3wsen4
         swaps:
             usd:
                 contract_hash: terra1tsln42kfeq8edwscmw8njgter5dp8evn40znn9
+                protocol: Terraswap
+    mAAPL:
+        icon: https://whitelist.mirror.finance/icon/AAPL.png
+        contract_hash: terra16vfxm98rxlc8erj4g0sj5932dvylgmdufnugk0
+        swaps:
+            usd:
+                contract_hash: terra1yj892rl8edvk0y2ayf3h36t6uf89lzxg8jea4a
+                protocol: Terraswap
+    mAMD:
+        icon: https://whitelist.mirror.finance/icon/AMD.png
+        contract_hash: terra1ftefjmtpnk2fctsa8xkv8naven65z5qtgq83nu
+        swaps:
+            usd:
+                contract_hash: terra12q2ehzn8jah7mfez9d0f7ztsu3vdf0g3mxzztq 
+                protocol: Terraswap
+    mBABA:
+        icon: https://whitelist.mirror.finance/icon/BABA.png
+        contract_hash: terra15dr4ah3kha68kam7a907pje9w6z2lpjpnrkd06
+        swaps:
+            usd:
+                contract_hash: terra15qq59h2canrr2pf8ny7rw57nx3mcvw97tp3xj4 
                 protocol: Terraswap
